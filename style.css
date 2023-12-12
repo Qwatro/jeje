@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #110B11;
+}
+
+nav{
+  background-color: #AD343E;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcd6d6;
+}
+
+.logo h1{
+  color: #F5F5DC;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.nav-links{
+  display: flex;
+  color:#F5F5DC;
+  width: 30%;
+  justify-content: space-around;
+}
+
+#check{
+  display: none;
+}
+
+.icons{
+  color:#F5F5DC;
+  font-size: 35px;
+  position: absolute;
+  right: 5%;
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links a{
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#F5F5DC;
+  font-weight: 600;
+}
+
+.container{
+  background-color: #bab0b0;
+  height: 87vh;
+  margin: 0px 10px;
+}
+
+
+
+footer{
+  height: 6vh;
+  background-color: #AD343E;
+  border-top: 1px solid #dcd6d6;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p{
+  color:#F5F5DC;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1098px){
+  nav{
+    padding: 10px;
+  }
+
+  .nav-links a{
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 860px){
+  .logo{
+    position: absolute;
+  }
+
+  .nav-links a{
+    display: none;
+  }
+
+  .icons{
+    display: block;
+  }
+
+  #alt-menu{
+    display: none;
+  }
+
+  #check:checked~.icons #menu{
+    display: none;
+  }
+
+  #check:checked~.icons #alt-menu{
+    display: block;
+  }
+
+  .nav-links{
+    height: 0;
+    width: 0;
+    transition: .5s linear;
+  }
+
+  #check:checked~.nav-links{
+    display: block;
+    position: absolute;
+    top: 100px;
+    background-color: #ad343e88;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35vh;
+    width: 100%;
+  }
+
+  #check:checked~.nav-links a{
+    display: block;
+  }
+
+}
